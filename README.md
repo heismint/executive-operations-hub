@@ -1,4 +1,5 @@
 # 🏢 Executive Operations OS & Standard Operating Procedures (SOPs)
+> 🚀 **[Click Here to View the Live Executive Sprint Board](https://github.com/users/heismint/projects/1)**
 
 A centralized operational repository containing standard operating procedures, automated workflows, and management runbooks designed for high-growth tech executives and distributed engineering teams.
 
