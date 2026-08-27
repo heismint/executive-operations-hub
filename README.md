@@ -7,13 +7,14 @@ A centralized operational repository containing standard operating procedures, a
 ---
 
 ## 📑 Table of Contents
-1. [Module 1: Email Triage and AI Voice Pipeline](#module-1-email-triage-and-ai-voice-pipeline)
-2. [Module 2: GitHub Project Consolidation and Issue Lifecycle](#module-2-github-project-consolidation-and-issue-lifecycle)
-3. [Module 3: Bookkeeping, Invoicing and Financial Operations](#module-3-bookkeeping-invoicing-and-financial-operations)
-4. [Module 4: Crypto Access Recovery and Asset Ledger Runbook](#module-4-crypto-access-recovery-and-asset-ledger-runbook)
+1. [Module 1: Email Triage and AI Voice Pipeline](#module-1)
+2. [Module 2: GitHub Project Consolidation and Issue Lifecycle](#module-2)
+3. [Module 3: Bookkeeping, Invoicing and Financial Operations](#module-3)
+4. [Module 4: Crypto Access Recovery and Asset Ledger Runbook](#module-4)
 
 ---
 
+<a id="module-1"></a>
 ## 📧 Module 1: Email Triage and AI Voice Pipeline
 
 ### 1. Label Architecture
@@ -43,6 +44,7 @@ Every incoming message is processed through a strict 3-tier triage system:
 
 ---
 
+<a id="module-2"></a>
 ## 🐙 Module 2: GitHub Project Consolidation and Issue Lifecycle
 
 ### 1. Issue Categorization Matrix
@@ -61,6 +63,7 @@ Every incoming message is processed through a strict 3-tier triage system:
 
 ---
 
+<a id="module-3"></a>
 ## 💰 Module 3: Bookkeeping, Invoicing and Financial Operations
 
 ### 1. Daily/Weekly Financial Operations Routine
@@ -77,6 +80,7 @@ Every incoming message is processed through a strict 3-tier triage system:
 
 ---
 
+<a id="module-4"></a>
 ## 🔐 Module 4: Crypto Access Recovery and Asset Ledger Runbook
 
 ### 1. Exchange Access Recovery Protocol (Coinbase / Custodial Wallets)
