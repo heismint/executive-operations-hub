@@ -7,7 +7,7 @@ A centralized operational repository containing standard operating procedures, a
 ---
 
 ## 📑 Table of Contents
-1. [Module 1: Email Triage & AI Voice Pipeline (Gmail + Claude)](#module-1-email-triage--ai-voice-pipeline)
+1. [Module 1: Email Triage & AI Voice Pipeline](#module-1-email-triage--ai-voice-pipeline)
 2. [Module 2: GitHub Project Consolidation & Issue Lifecycle](#module-2-github-project-consolidation--issue-lifecycle)
 3. [Module 3: Bookkeeping, Invoicing & Financial Operations](#module-3-bookkeeping-invoicing--financial-operations)
 4. [Module 4: Crypto Access Recovery & Asset Ledger Runbook](#module-4-crypto-access-recovery--asset-ledger-runbook)
@@ -24,33 +24,74 @@ Every incoming message is processed through a strict 3-tier triage system:
 * `📁 04_ARCHIVE/RECEIPTS` — Filtered automatically; skips inbox.
 
 ### 2. Custom Gmail Filter Operators
-```text
-# Catch calendar notices and system alerts
-Matches: filename:ics OR from:(*@calendar-notification.google.com)
-Action: Apply label "📁 System/Calendar", Skip Inbox
+* **Catch calendar notices and system alerts:**  
+  `filename:ics OR from:(*@calendar-notification.google.com)` ➔ Apply label *📁 System/Calendar*, Skip Inbox.
+* **Isolate vendor invoices and statements:**  
+  `(subject:invoice OR subject:receipt OR subject:statement) filename:pdf` ➔ Apply label *💰 Finance/Invoices*, Star message.
 
-# Isolate vendor invoices and statements
-Matches: (subject:invoice OR subject:receipt OR subject:statement) filename:pdf
-Action: Apply label "💰 Finance/Invoices", Star message
+### 3. Production Claude System Prompt (Draft Generation)
+> **System Prompt:**  
+> You are the Technical Executive Assistant to a tech founder. Your job is to draft a concise, professional, and clear email response based on the incoming context.  
+>  
+> **Rules:**  
+> 1. Tone: Direct, warm, professional, zero corporate fluff.  
+> 2. Structure: 1-2 sentence acknowledgment + clear next steps/action item + sign-off.  
+> 3. If information is missing, use bracketed placeholders like `[Confirm Date]` for the executive.  
+>  
+> **Incoming Context:** `{{INSERT_EMAIL_BODY}}`  
+> **Executive's Decision:** `{{INSERT_QUICK_BULLET_POINTS}}`
 
+---
 
-System Prompt:
-You are the Technical Executive Assistant to a tech founder. Your job is to draft a concise, professional, and clear email response based on the incoming context.
+## 🐙 Module 2: GitHub Project Consolidation & Issue Lifecycle
 
-Rules:
-1. Tone: Direct, warm, professional, zero corporate fluff.
-2. Structure: 1-2 sentence acknowledgment + clear next steps/action item + sign-off.
-3. If information is missing, use bracketed placeholders like [Confirm Date] for the executive.
+### 1. Issue Categorization Matrix
+| Tag | Description | SLA / Priority |
+| :--- | :--- | :--- |
+| `p0-blocker` | Production or executive bottleneck requiring immediate resolution | < 2 Hours |
+| `ops-finance` | Bookkeeping, invoicing, and contract management tasks | 24 Hours |
+| `access-security`| Access recovery, 2FA management, and repository permissions | 12 Hours |
+| `dev-tracking` | Sprint backlog items and pull request status reviews | Weekly Sync |
 
-Incoming Email Context:
-{{INSERT_EMAIL_BODY}}
+### 2. Issue Lifecycle Workflow
+1. **Intake:** Unstructured requests from Slack/email are turned into structured GitHub Issues.
+2. **Scoping:** Clear acceptance criteria and checklists are added.
+3. **Execution:** Work proceeds in `In Progress` with linked commits/branches where applicable.
+4. **Approval:** Moved to `Needs Review` for executive sign-off before marking `Done`.
 
-Executive's Core Decision:
-{{INSERT_QUICK_BULLET_POINTS}}
+---
 
-Generate Draft:
+## 💰 Module 3: Bookkeeping, Invoicing & Financial Operations
 
-Phase 1: Chart of Accounts Setup (Standardize Operating Expenses, SaaS, Contractor Payouts).
-Phase 2: Data Cleansing & CSV Export of previous 90-day transactions.
-Phase 3: Bank Feed & Payment Gateway Integration (Stripe, Mercury, Brex).
-Phase 4: Rule Automation for recurring vendor categorization.
+### 1. Daily/Weekly Financial Operations Routine
+1. **Receipt Intake:** Download PDF invoices from `💰 Finance/Invoices` label in Gmail.
+2. **Spreadsheet Reconciliation:** Log Vendor, Transaction ID, Date, Amount, Expense Category, and Payment Method into Google Sheets.
+3. **Invoice Generation:** Draft outgoing client invoices with standard NET 15/30 payment terms.
+4. **A/R Tracking:** Send structured reminders for any balances aged past 14 days.
+
+### 2. Transition Plan: Google Sheets ➔ QuickBooks/Xero
+* **Phase 1:** Chart of Accounts Setup (Standardize Operating Expenses, SaaS, Contractor Payouts).
+* **Phase 2:** Data Cleansing & CSV Export of previous 90-day transactions.
+* **Phase 3:** Bank Feed & Payment Gateway Integration (Stripe, Mercury, Brex).
+* **Phase 4:** Rule Automation for recurring vendor categorization.
+
+---
+
+## 🔐 Module 4: Crypto Access Recovery & Asset Ledger Runbook
+
+### 1. Exchange Access Recovery Protocol (Coinbase / Custodial Wallets)
+* **Step 1: Evidence Gathering Dossier**
+  * Current Government ID (High-res front/back scan).
+  * Proof of Address dated within last 90 days.
+  * Historical transaction hashes (TxIDs) associated with funding wallets.
+  * Approximate account creation date and registered primary email.
+* **Step 2: Ticket Management & Escalation**
+  * Open case via official support portal; record Case Number immediately.
+  * Log all correspondence in internal secure tracker.
+  * Set recurring calendar follow-ups every 48 hours until identity review completes.
+
+### 2. Staked Crypto Tracking Ledger Format
+| Asset | Platform | Staked Amount | Validator / Lockup | Reward Cadence | Unbonding Period |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **ETH** | Coinbase Prime | 32.0 ETH | Coinbase Pool | Daily | 9 Days |
+| **SOL** | Phantom / Native | 500 SOL | Ledger Validator | Epoch (~3 days) | 1 Epoch |
