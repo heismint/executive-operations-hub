@@ -115,7 +115,7 @@ High-growth leadership teams cannot afford ambiguous meeting notes or lost actio
 
 ### 2. Standard Executive Decision Record (EDR) Template
 
-````markdown
+```markdown
 # [EDR] Strategy Sync: [Topic / Working Title]
 **Date:** YYYY-MM-DD | **Time:** HH:MM [Timezone]  
 **Participants:** [CEO], [Department Lead], [EA / Ops Lead]  
@@ -150,3 +150,41 @@ A 2–3 sentence distillation of why this meeting occurred, the core challenge d
 * **Blocker:** [Describe dependency or third-party delay]
   * *Mitigation / Next Step:* Who is unblocking it, and by when.
 * **Unresolved Ambiguity:** [Points deferred to the next sync or requiring async data gathering].
+```
+
+---
+
+<a id="module-6"></a>
+## 🔄 Module 6: Cross-Functional Cadence & Commitment Tracking
+
+### 1. SLA & Commitment Enforcement Protocol
+To protect executive focus, cross-functional accountability runs autonomously without the CEO acting as a manual reminder engine:
+
+1. **Commitment Logging:** Every deliverable promised during leadership or functional syncs is converted into a tracked issue within 2 hours.
+2. **Asynchronous Check-in (T-48h):** Automated or templated ping sent to the DRI 48 hours prior to deadline to confirm delivery status or identify slippage early.
+3. **Objective Slippage Escalation:** If a P0 commitment misses its SLA by >12 hours without pre-communicated justification, it is immediately highlighted in the CEO’s daily briefing with root cause and recommended remediation.
+
+### 2. Weekly Executive Summary & Friction Log Template
+
+```markdown
+# Weekly Executive Operational Brief
+**Week of:** YYYY-MM-DD  
+**Prepared by:** CEO Office (Executive Operations)
+
+### 1. High-Priority Deliverables (P0/P1)
+- [x] **Closed:** Board deck V1 review finalized and circulated to advisory committee.
+- [x] **Closed:** Automated Linear to Slack webhook configured for engineering escalation.
+- [ ] **In Progress (On Track):** Vendor contract renewal negotiation ($14K annual cost reduction). Target: Thursday.
+- [!] **At Risk / Delayed:** Enterprise customer API documentation sign-off (DRI: @EngineeringLead). Blocker: Awaiting staging cluster stability.
+
+### 2. Cross-Functional Execution Hygiene
+* **Total Commitments Tracked This Week:** 18
+* **Completed On Time:** 15 (83.3%)
+* **Rescheduled with Advance Notice:** 2 (11.1%)
+* **Unplanned Slippage / Missed:** 1 (5.6%)
+
+### 3. Operational Friction & System Recommendations
+* **Bottleneck:** High volume of manual NDA signature requests cluttering primary inbox.
+* **Implemented Fix:** Deployed DocuSign automated template trigger; routed directly to legal archive.
+* **CEO Action Required:** Approve revised payment approval threshold ($5,000+) in Mercury.
+```
