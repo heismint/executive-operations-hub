@@ -11,6 +11,8 @@ A centralized operational repository containing standard operating procedures, a
 2. [Module 2: GitHub Project Consolidation and Issue Lifecycle](#module-2)
 3. [Module 3: Bookkeeping, Invoicing and Financial Operations](#module-3)
 4. [Module 4: Crypto Access Recovery and Asset Ledger Runbook](#module-4)
+5. [Module 5: Executive Meeting Synthesis & Decision Records (EDR)](#module-5)
+6. [Module 6: Cross-Functional Cadence & Commitment Tracking](#module-6)
 
 ---
 
@@ -99,3 +101,52 @@ Every incoming message is processed through a strict 3-tier triage system:
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **ETH** | Coinbase Prime | 32.0 ETH | Coinbase Pool | Daily | 9 Days |
 | **SOL** | Phantom / Native | 500 SOL | Ledger Validator | Epoch (~3 days) | 1 Epoch |
+
+---
+
+<a id="module-5"></a>
+## 🏛️ Module 5: Executive Meeting Synthesis & Decision Records (EDR)
+
+### 1. The Synthesis Protocol
+High-growth leadership teams cannot afford ambiguous meeting notes or lost action items. Every internal sync, board meeting, and strategic session follows a strict post-meeting SLA:
+* **Turnaround Time:** Full synthesis distributed within **90 minutes** of meeting adjournment.
+* **Intake Standard:** Real-time raw capture filtered for signal, discarding conversational filler.
+* **Output Standard:** Clear separation of context, architectural/business decisions, and assigned accountability.
+
+### 2. Standard Executive Decision Record (EDR) Template
+
+````markdown
+# [EDR] Strategy Sync: [Topic / Working Title]
+**Date:** YYYY-MM-DD | **Time:** HH:MM [Timezone]  
+**Participants:** [CEO], [Department Lead], [EA / Ops Lead]  
+**Status:** Approved / Actionable
+
+---
+
+### 1. Executive Summary & Context
+A 2–3 sentence distillation of why this meeting occurred, the core challenge discussed, and the net strategic outcome. Zero conversational filler.
+
+---
+
+### 2. Key Decisions Made
+* **DECISION 1:** [Clear statement of the final call made]
+  * *Rationale:* Why this approach was selected over alternatives.
+  * *Impact:* Impacted teams, timelines, or capital reallocation.
+* **DECISION 2:** [Clear statement of the final call made]
+  * *Rationale:* Supporting technical/operational justification.
+
+---
+
+### 3. Action Items & Commitment Matrix
+| Action Item | Directly Responsible Individual (DRI) | Priority | Hard Deadline | Issue Tracker Link |
+| :--- | :--- | :--- | :--- | :--- |
+| Finalize vendor evaluation matrix | @HeadOfProduct | P0 | YYYY-MM-DD (COB) | #OPS-104 |
+| Draft board slide deck narrative | @CEO / @Ops | P1 | YYYY-MM-DD (12:00 EST) | #EXEC-42 |
+| Update customer SLA terms in contracts | @LegalLead | P2 | YYYY-MM-DD | #LEG-18 |
+
+---
+
+### 4. Identified Risks, Blockers & Escalations
+* **Blocker:** [Describe dependency or third-party delay]
+  * *Mitigation / Next Step:* Who is unblocking it, and by when.
+* **Unresolved Ambiguity:** [Points deferred to the next sync or requiring async data gathering].
